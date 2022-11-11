@@ -156,71 +156,39 @@
                 Get In Touch <br>                                                   <!--get in touch text-->
             </h1>
 
+            <!--Forms-->
+            <div class="u-form u-form-1">
+                <form name="Contact Form" method="post" netlify-honeypot="bot-field" data-netlify="true" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px">
+                    <input hidden name="bot-field"/>
 
-            <form name="contact"
-                  method="POST"
-                  netlify-honeypot="bot-field"
-                  data-netlify="true">
-                <p class="hidden">
-                    <label>
-                        Don’t fill this out if you’re human: <input name="bot-field" />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Email: <input type="text" name="email" />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Message: <textarea name="message"></textarea>
-                    </label>
-                </p>
-                <p>
-                    <button type="submit">Send</button>
-                </p>
-            </form>
+                    <div class="u-form-group u-form-name u-label-none">
+                        <label for="name-3b9a" class="u-label">Name</label>
+                        <input type="text" placeholder="name" id="name-3b9a" name="name" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-1" required="">
+                    </div>
+                    <div class="u-form-email u-form-group u-label-none">
+                        <label for="email-3b9a" class="u-label">Email</label>
+                        <input type="email" placeholder="email" id="email-3b9a" name="email" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-2" required="">
+                    </div>
+                    <div class="u-form-group u-form-message u-label-none">
+                        <label for="message-3b9a" class="u-label">Message</label>
+                        <textarea placeholder="message" rows="4" cols="50" id="message-3b9a" name="message" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-3" required=""></textarea>
+                    </div>
+                    <!--send-->
+                    <div class="u-align-center u-form-group u-form-submit">
+                        <a href="#" class="u-border-2 u-border-custom-color-1 u-btn u-btn-rectangle u-btn-submit u-button-style u-custom-color-1 u-text-body-alt-color u-btn-1">SEND</a>
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
 
-
-
-
-
-
-
-            <!--Forms
-    <div class="u-form u-form-1">
-        <form name="Contact Form" method="post" data-netlify="true" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px"
-              >
-            -->
-            <!--
-    <div class="u-form-group u-form-name u-label-none">
-        <label for="name-3b9a" class="u-label">Name</label>
-        <input type="text" placeholder="name" id="name-3b9a" name="name" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-1" required="">
-    </div>
-    <div class="u-form-email u-form-group u-label-none">
-        <label for="email-3b9a" class="u-label">Email</label>
-        <input type="email" placeholder="email" id="email-3b9a" name="email" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-2" required="">
-    </div>
-    <div class="u-form-group u-form-message u-label-none">
-        <label for="message-3b9a" class="u-label">Message</label>
-        <textarea placeholder="message" rows="4" cols="50" id="message-3b9a" name="message" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-3" required=""></textarea>
-    </div>
-    <!--send
-    <div class="u-align-center u-form-group u-form-submit">
-        <a href="#" class="u-border-2 u-border-custom-color-1 u-btn u-btn-rectangle u-btn-submit u-button-style u-custom-color-1 u-text-body-alt-color u-btn-1">SEND</a>
-        <input type="submit" value="submit" class="u-form-control-hidden">
-    </div>
-
-    -->
-            <!--
+                    
+                    
                     <div class="u-form-send-message u-form-send-success"> Thank you! Expect a reply soon! </div>
                     <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-
+                    
                     <!--<input type="hidden" value="" name="recaptchaResponse">
-        <input type="hidden" name="formServices" value="123e945903ae32efe1e3caaaaeb77758">
-    -->
-            </form>
-        </div>
+                        <input type="hidden" name="formServices" value="123e945903ae32efe1e3caaaaeb77758">
+                    -->
+                </form>
+            </div>
 
 
             <p class="u-text u-text-default u-text-grey-50 u-text-2">&copy; 2022 Rock Cube Creative | All Rights Reserved</p>
