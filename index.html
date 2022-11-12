@@ -25,6 +25,66 @@
     <meta property="og:title" content="TESTTESTTEST">
     <meta property="og:type" content="website">
 </head>
+
+
+
+
+<script src="https://www.google.com/recaptcha/api.js?render=6Leh2v0iAAAAAPa1pLK_2UFh3qFWh7hF5-Vgtpgj"></script>
+<script>
+    (function (grecaptcha, sitekey, actions) {
+        var recaptcha = {
+            execute: function (action, submitFormCb) {
+                try {
+                    grecaptcha.execute(
+                        sitekey,
+                        { action: action }
+                    ).then(function (token) {
+                        var forms = document.getElementsByTagName('form');
+
+                        for (var i = 0; i < forms.length; i++) {
+                            var fields = forms[i].getElementsByTagName('input');
+
+                            for (var j = 0; j < fields.length; j++) {
+                                var field = fields[j];
+
+                                if ('recaptchaResponse' === field.getAttribute('name')) {
+                                    field.setAttribute('value', token);
+                                    break;
+                                }
+                            }
+                        }
+                        submitFormCb();
+                    });
+                } catch (e) {
+                    var formError = document.querySelector('.u-form-send-error');
+
+                    if (formError) {
+                        formError.innerText = 'Site Owner Error: ' + e.message.replace(/:[\s\S]*/, '');
+                        formError.style.display = 'block';
+                    }
+                }
+            },
+
+            executeContact: function (submitFormCb) {
+                recaptcha.execute(actions['contact'], submitFormCb);
+            }
+        };
+
+        window.recaptchaObject = recaptcha;
+    })(
+        grecaptcha,
+
+        '6Leh2v0iAAAAAPa1pLK_2UFh3qFWh7hF5-Vgtpgj',
+        { 'contact': 'contact' }
+    );
+</script>
+
+
+
+
+
+
+
 <body data-home-page="" data-home-page-title="RCCweb" class="u-body u-xl-mode" data-lang="en">
     <section class="u-align-center u-clearfix u-custom-color-1 u-section-1" id="sec-c8f0">
         <div class="u-clearfix u-sheet u-sheet-1">
@@ -111,7 +171,7 @@
                     </div>
                     <div class="u-gallery-item">
                         <div class="u-back-slide" data-image-width="900" data-image-height="600">
-                                                                                                        <!--Image 9-->
+                            <!--Image 9-->
                             <img class="u-back-image u-expanded" src="images/p1.png">
                         </div>
                         <div class="u-over-slide u-over-slide-9">
@@ -158,7 +218,7 @@
 
             <!--Forms-->
             <div class="u-form u-form-1">
-                <form name="Contact Form" method="post" data-netlify-recaptcha="true" data-netlify="true" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px">
+                <form name="Contact Form" method="post" data-netlify="true" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px">
 
 
                     <div class="u-form-group u-form-name u-label-none">
@@ -178,11 +238,11 @@
                         <a href="#" class="u-border-2 u-border-custom-color-1 u-btn u-btn-rectangle u-btn-submit u-button-style u-custom-color-1 u-text-body-alt-color u-btn-1">SEND</a>
                         <input type="submit" value="submit" class="u-form-control-hidden">
                     </div>
-                    
-                    <p style="text-align:center" data-netlify-recaptcha="true"></p>
-
-                    <div class="u-form-send-message u-form-send-success"> Thank you! Expect a reply soon! </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
                     <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                    <input type="hidden" name="formServices" value="123e945903ae32efe1e3caaaaeb77758">
+                    <input type="hidden" name="siteKey" value="6Leh2v0iAAAAAPa1pLK_2UFh3qFWh7hF5-Vgtpgj">
 
                 </form>
             </div>
